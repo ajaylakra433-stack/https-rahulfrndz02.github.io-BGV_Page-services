@@ -2,328 +2,317 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hiresure360 – Background Verification Company in India</title>
+<title>Hiresure360 | Background Verification & Employee Screening India</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO -->
-<meta name="description" content="Hiresure360 provides employee background verification services including employment, education, address, police, ID and reference verification across India.">
-<meta name="keywords" content="background verification, bgv check, police verification, employment verification, education verification company India">
+<meta name="description" content="Hiresure360 is a professional Background Verification Company in India offering employment verification, education verification, address check, criminal record check and global screening services.">
+<meta name="keywords" content="background verification company india, bgv india, employee background check, criminal verification, address verification, employment verification, hiresure360">
 <meta name="author" content="Hiresure360">
 
 <style>
 
 body{
-font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background:linear-gradient(120deg,#e8f0ff,#ffffff);
-color:#0b2559;
+font-family:Inter,Segoe UI,Arial;
+background:#f4f7ff;
+color:#07214a;
+line-height:1.6;
 }
 
 /* NAVBAR */
 nav{
-background:#021a44;
-padding:14px;
-text-align:center;
+background:#061b46;
+display:flex;
+gap:35px;
+justify-content:center;
+padding:16px;
 position:sticky;
 top:0;
-z-index:9999;
+z-index:100;
 }
 nav a{
 color:white;
 text-decoration:none;
-padding:12px 18px;
-display:inline-block;
+font-weight:600;
 }
-nav a:hover{
-background:#0b57d0;
-border-radius:6px;
-}
+nav a:hover{color:#49a7ff}
 
 /* HERO SLIDER */
 .hero{
-height:420px;
-color:white;
+height:360px;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding-top:110px;
+color:white;
 background-size:cover;
 background-position:center;
-transition:1s;
+animation:slideHero 15s infinite;
+}
+@keyframes slideHero{
+0%{background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1400');}
+33%{background-image:url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9c5?w=1400');}
+66%{background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400');}
 }
 .hero h1{
-font-size:44px;
-text-shadow:0 3px 20px black;
-}
-.hero p{
-font-size:18px;
+font-size:42px;
+text-shadow:0 5px 20px rgba(0,0,0,.5);
 }
 
-/* GLASS CARD */
-.card{
-backdrop-filter:blur(7px);
-background:rgba(255,255,255,0.55);
-border:1px solid rgba(200,200,255,0.6);
-border-radius:18px;
-padding:18px;
+/* SECTION */
+section{
+max-width:1150px;
+margin:auto;
+padding:60px 20px;
 }
 
 /* COUNTERS */
-.counter{
-font-size:60px;
-font-weight:bold;
+.counterArea{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+.counterBox{
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 26px rgba(0,0,0,.07);
+}
+.counterBox span{
+font-size:48px;
+font-weight:800;
+}
+.counterBox small{
+display:block;
+font-size:14px;
+color:#6c7c9a;
 }
 
-/* PROCESS TIMELINE */
-.timeline{
-border-left:5px solid #0b57d0;
-padding-left:20px;
-}
-.timeline div{
-margin-bottom:18px;
+/* SERVICES */
+.serviceCard{
+padding:18px;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 26px rgba(0,0,0,.05);
+margin-bottom:10px;
 }
 
-/* LOGO ANIMATION */
-.logo-row img{
-height:55px;
-margin:8px;
-opacity:.7;
-transition:.4s;
+/* PROCESS */
+.processGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
 }
-.logo-row img:hover{
-opacity:1;
-transform:translateY(-5px);
+.processItem{
+background:white;
+padding:18px;
+border-radius:15px;
+box-shadow:0 10px 26px rgba(0,0,0,.06);
+}
+
+/* TEAM */
+.teamGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+.teamGrid img{
+width:100%;
+border-radius:15px;
 }
 
 /* TESTIMONIAL SLIDER */
 .testimonial{
-display:none;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 26px rgba(0,0,0,.05);
 }
-.active-testimonial{
-display:block;
-animation:fade 1s;
+.slider{
+display:flex;
+overflow:hidden;
 }
-@keyframes fade{
-from{opacity:.2}
-to{opacity:1}
+.slideRow{
+display:flex;
+animation:slide 14s infinite linear;
+}
+@keyframes slide{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
 
-/* CHATBOT */
-.chatbot{
+/* CLIENT LOGOS */
+.clientStrip{
+display:flex;
+gap:35px;
+justify-content:center;
+opacity:.85;
+}
+
+/* CONTACT */
+input,textarea{
+width:100%;
+padding:10px;
+border-radius:10px;
+border:1px solid #cfd7ff;
+}
+
+/* FOOTER */
+footer{
+background:#061b46;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
 position:fixed;
 right:20px;
 bottom:20px;
-background:#30c46d;
+background:#25d366;
+padding:10px 15px;
+border-radius:40px;
 color:white;
-padding:12px 14px;
-border-radius:24px;
 text-decoration:none;
-box-shadow:0 4px 20px rgba(0,0,0,.3);
+font-weight:600;
 }
-
-/* STICKY ENQUIRY BUTTON */
-.enquiry{
-position:fixed;
-left:20px;
-bottom:20px;
-background:#021a44;
-color:white;
-padding:12px 14px;
-border-radius:24px;
-text-decoration:none;
-}
-
-section{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
-
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+document.querySelectorAll(".num").forEach(num=>{
+let t=+num.dataset.target;
+let c=0;
+let inc=t/100;
+setInterval(()=>{
+if(c<t){
+c+=inc;
+num.innerText=Math.floor(c);
+}
+},25);
+});
+
+});
+</script>
 
 </head>
 
 <body>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#process">Process</a>
-<a href="#team">Team</a>
-<a href="#blog">Blog</a>
-<a href="#contact">Contact</a>
+<a>Home</a>
+<a>Services</a>
+<a>Process</a>
+<a>Team</a>
+<a>Clients</a>
+<a>Contact</a>
 </nav>
 
-<!-- HERO AUTO SLIDER -->
-<header id="home" class="hero" id="hero">
-<h1>Hiresure360</h1>
-<p>Trusted Background Verification & Employee Screening Services</p>
-<div style="font-size:22px">⭐⭐⭐⭐⭐ 4.9 / 5 Client Rating</div>
-</header>
+<div class="hero">
+<h1>Trusted Background Verification Partner for Enterprises</h1>
+</div>
 
-<script>
-let hero=document.querySelector(".hero");
-let slides=[
-"https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-"https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
-"https://images.pexels.com/photos/3184636/pexels-photo-3184636.jpeg"
-];
-let i=0;
-setInterval(()=>{
-hero.style.backgroundImage=`url(${slides[i]})`;
-i=(i+1)%slides.length;
-},3000);
-</script>
-
-<!-- COUNTERS -->
 <section>
 <h2>Our Impact</h2>
 
-<div class="card">
-<span class="counter" id="c1">0</span>+ Candidates Verified<br>
-<span class="counter" id="c2">0</span>+ Corporate Clients<br>
-<span class="counter" id="c3">0</span>+ Years Experience<br>
-<span class="counter" id="c4">0</span>+ Cities Covered
+<div class="counterArea">
+<div class="counterBox"><span class="num" data-target="5000">0</span><small>Candidates Verified</small></div>
+<div class="counterBox"><span class="num" data-target="120">0</span><small>Corporate Clients</small></div>
+<div class="counterBox"><span class="num" data-target="8">0</span><small>Years Experience</small></div>
+<div class="counterBox"><span class="num" data-target="50">0</span><small>Cities Covered</small></div>
 </div>
-
-<script>
-function animate(id,target){
-let n=0;
-let el=document.getElementById(id);
-let x=setInterval(()=>{
-n++;
-el.innerText=n;
-if(n==target)clearInterval(x);
-},10);
-}
-animate("c1",5000);
-animate("c2",120);
-animate("c3",8);
-animate("c4",50);
-</script>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<section>
 <h2>Verification Services</h2>
-
-<div class="card">
+<div class="serviceCard">
 ✔ Employment Verification<br>
 ✔ Education Verification<br>
 ✔ Address Verification<br>
 ✔ Criminal Court Check<br>
 ✔ Police Record Check<br>
-✔ ID Verification – Aadhaar / PAN / Passport<br>
+✔ ID Verification (Aadhaar / PAN / Passport)<br>
 ✔ Global Database Screening<br>
-✔ Reference Check<br>
 ✔ Drug Test Check<br>
-✔ Social Media Screening
+✔ Reference Check<br>
+✔ Social Media Screening<br>
 </div>
 </section>
 
-<!-- PROCESS ANIMATED TIMELINE -->
-<section id="process">
-<h2>Verification Process</h2>
-
-<div class="timeline">
-<div>📩 Candidate submits documents</div>
-<div>🔍 Verification initiated</div>
-<div>🏢 Employer / University contacted</div>
-<div>✔ Result validated</div>
-<div>📑 Report generated</div>
-</div>
-</section>
-
-<!-- TRUST BADGES -->
 <section>
-<h2>Trusted By</h2>
-
-<div class="logo-row">
-<img src="https://1000logos.net/wp-content/uploads/2021/04/TCS-logo.png">
-<img src="https://1000logos.net/wp-content/uploads/2021/06/Infosys-logo.png">
-<img src="https://1000logos.net/wp-content/uploads/2023/01/Wipro-logo.png">
-<img src="https://1000logos.net/wp-content/uploads/2021/05/HCL-logo.png">
-<img src="https://1000logos.net/wp-content/uploads/2020/07/Capgemini-Logo.png">
+<h2>Our Verification Process</h2>
+<div class="processGrid">
+<div class="processItem">Candidate submits KYC & Consent</div>
+<div class="processItem">Verification Initiated via Database / Field</div>
+<div class="processItem">Quality Audit & Fraud Rule Engine</div>
+<div class="processItem">Digital Report Delivered to Client</div>
 </div>
-
-<p style="font-size:12px;text-align:center">
-Logos for representation — sample clients
-</p>
 </section>
 
-<!-- TEAM -->
-<section id="team">
-<h2>Leadership Team</h2>
-
-<div class="card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg" height="120"><br>
-<b>Divya Bhatt</b><br>Founder & CEO
-</div>
-
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg" height="120"><br>
-<b>Arjun Lakra</b><br>Head Operations
-</div>
-
-<div class="card">
-<img src="https://randomuser.me/api/portraits/men/72.jpg" height="120"><br>
-<b>Ayush Aman</b><br>Legal & Compliance Head
-</div>
-
-</section>
-
-<!-- TESTIMONIAL SLIDER -->
 <section>
 <h2>Client Testimonials</h2>
 
-<div class="testimonial active-testimonial">“Fast & accurate verification reports.”</div>
-<div class="testimonial">“Excellent support team and TAT.”</div>
-<div class="testimonial">“Helped us scale hiring securely.”</div>
-
-<script>
-let t=0;
-setInterval(()=>{
-let test=document.querySelectorAll(".testimonial");
-test.forEach(e=>e.classList.remove("active-testimonial"));
-test[t].classList.add("active-testimonial");
-t=(t+1)%test.length;
-},2500);
-</script>
-</section>
-
-<!-- BLOG -->
-<section id="blog">
-<h2>Latest Articles</h2>
-
-<div class="card">
-📌 Why Background Verification is Essential in 2026
+<div class="slider">
+<div class="slideRow">
+<div class="testimonial">“Accurate reports and quick turnaround time.”</div>
+<div class="testimonial">“Professional team and instant support.”</div>
+<div class="testimonial">"Helped us scale hiring securely."</div>
 </div>
-
-<div class="card">
-📌 How Fake Degrees Are Caught During Hiring
-</div>
-
-<div class="card">
-📌 Legal Compliance in Employee Screening
 </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section id="contact">
+<section>
+<h2>Leadership Team</h2>
+
+<div class="teamGrid">
+<div>
+<img src="https://images.unsplash.com/photo-1603415526801-9aa831b73b1c?w=800">
+<b>Divya Bhatt</b><br>Founder & CEO
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=800">
+<b>Arjun Lakra</b><br>Head of Operations
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800">
+<b>Ayush Aman</b><br>Head of Legal & Compliance
+</div>
+</div>
+</section>
+
+<section>
+<h2>Trusted By</h2>
+<div class="clientStrip">
+<img width="90" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TATA.svg">
+<img width="120" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Infosys_logo.svg">
+<img width="120" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Wipro_Primary_Logo_Color_RGB.svg">
+</div>
+<p style="text-align:center;font-size:12px">Sample client logos for representation</p>
+</section>
+
+<section>
 <h2>Contact Us</h2>
 
 <form>
-<input class="card" placeholder="Name"><br><br>
-<input class="card" placeholder="Email"><br><br>
-<input class="card" placeholder="Phone"><br><br>
-<textarea class="card" placeholder="Your message"></textarea><br>
+<input placeholder="Full Name"><br><br>
+<input placeholder="Email"><br><br>
+<input placeholder="Phone"><br><br>
+<textarea placeholder="Your Requirement"></textarea><br><br>
+<button>Submit</button>
 </form>
-
-<p>Email: verification@hiresure360.com</p>
-<p>WhatsApp: +91 9717272021</p>
 </section>
 
-<!-- STICKY BUTTONS -->
-<a class="chatbot" href="https://wa.me/919717272021" target="_blank">💬 Chat with us</a>
-<a class="enquiry" href="#contact">📩 Enquire Now</a>
+<footer>
+© 2026 Hiresure360 — Background Verification & Employee Screening Solutions
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919717272021">Chat on WhatsApp</a>
 
 </body>
 </html>
