@@ -2,165 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hiresure360 – Background Verification Company in India</title>
+<title>Hiresure360 – Background Verification Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Hiresure360 offers employee background verification including employment, education, address, ID and criminal verification across India.">
-<meta name="keywords" content="background verification, bgv company, employee check, police verification, education check, address verification, India">
-<meta name="author" content="Hiresure360">
-
 <style>
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f2f6ff;
-color:#0b2559;
-}
+body{font-family:Arial;margin:0;background:#f2f6ff;color:#0b2559}
 
-/* NAVBAR */
-nav{
-background:#0b2559;
-padding:12px;
-position:sticky;
-top:0;
-z-index:20;
+/* NAV */
+nav{background:#0b2559;padding:12px;text-align:center;position:sticky;top:0}
+nav a{color:white;padding:10px 14px;text-decoration:none}
+nav a:hover{background:#173d9c}
+
+/* SECTION */
+section{padding:55px 25px;max-width:1150px;margin:auto}
+
+/* HERO */
+.hero{
 text-align:center;
-}
-nav a{
 color:white;
-text-decoration:none;
-padding:10px 14px;
-display:inline-block;
-}
-nav a:hover{background:#163b8c}
-
-/* SECTIONS */
-section{
-padding:55px 25px;
-max-width:1200px;
-margin:auto;
-}
-
-h2{text-align:center}
-
-/* CARDS */
-.card{
-background:white;
-border-radius:12px;
-padding:18px;
-border:1px solid #cfd8ff;
+padding:70px 20px;
+background:#011a4b url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
 }
 
 /* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 
-/* HERO SLIDER */
-.hero{
-height:300px;
-background:#0b2559;
-color:white;
-text-align:center;
-padding-top:50px;
-animation:fade 8s infinite;
-}
-@keyframes fade{
-0%{background:#0b2559;}
-50%{background:#0d3899;}
-100%{background:#0b2559;}
-}
+.card{background:white;padding:18px;border-radius:12px;border:1px solid #cfd8ff}
+
+/* CLIENT LOGOS */
+.logoRow img{height:55px;margin:12px}
+
+/* TEAM */
+.team img{width:100%;border-radius:12px}
 
 /* COUNTERS */
-.counterBox{
-background:#eaf0ff;
-border:1px solid #cfd8ff;
-border-radius:14px;
-padding:18px;
-text-align:center;
-font-size:18px;
-}
+.counter{background:#eaf0ff;padding:16px;border-radius:12px;text-align:center}
 
-/* LOGO ROW */
-.logoRow img{
-height:55px;
-margin:15px;
-opacity:.9;
-}
-
-/* TESTIMONIAL SLIDER */
-.slider{
-display:flex;
-overflow:hidden;
-}
-.slide{
-min-width:100%;
-animation:scroll 10s infinite;
-}
-@keyframes scroll{
-0%{transform:translateX(0)}
-50%{transform:translateX(-100%)}
-100%{transform:translateX(0)}
-}
-
-/* FORM */
-input,textarea{
-width:100%;
-padding:10px;
-border-radius:8px;
-border:1px solid #b6c4ff;
-}
-
-button{
-background:#0b2559;
-color:white;
-border:none;
-padding:10px 14px;
-border-radius:8px;
-cursor:pointer;
-}
-
-/* WHATSAPP FLOAT */
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 16px;
-border-radius:40px;
-text-decoration:none;
+position:fixed;right:20px;bottom:20px;background:#25D366;
+padding:12px 16px;border-radius:30px;color:white;text-decoration:none
 }
 </style>
-
-<script>
-// COUNTER ANIMATION
-function animate(id,target){
-let obj=document.getElementById(id);
-let c=0;
-let x=setInterval(()=>{
-c++;
-obj.innerHTML=c;
-if(c>=target) clearInterval(x);
-},10);
-}
-window.onload=function(){
-animate("candidates",5000);
-animate("clients",120);
-animate("experience",8);
-animate("cities",50);
-}
-</script>
-
 </head>
+
 <body>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
-<a href="#process">Process</a>
+<a href="#team">Team</a>
 <a href="#impact">Impact</a>
 <a href="#clients">Clients</a>
 <a href="#contact">Contact</a>
@@ -178,44 +68,73 @@ animate("cities",50);
 
 <div class="grid">
 
-<div class="card">✔ Employment Verification<br>Role, tenure & HR confirmation</div>
-<div class="card">✔ Education Verification<br>University & degree validation</div>
-<div class="card">✔ Address Verification<br>Physical / Digital address check</div>
-<div class="card">✔ Criminal Record Check<br>Police & court record search</div>
-<div class="card">✔ ID Verification<br>Aadhaar PAN Passport</div>
-<div class="card">✔ Global Database Check<br>Sanctions & watchlist</div>
-<div class="card">✔ Drug Test Screening</div>
-<div class="card">✔ Social Media Check</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=60" width="100%">
+<b>Employment Verification</b><br>
+Role, tenure, salary & HR confirmation
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=60" width="100%">
+<b>Education Verification</b><br>
+University & degree validation
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092919535-7123246ba10c?auto=format&fit=crop&w=600&q=60" width="100%">
+<b>Address Verification</b><br>
+Physical / digital address validation
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=600&q=60" width="100%">
+<b>Criminal Record Check</b><br>
+Police & court records
+</div>
 
 </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-<h2>Verification Process</h2>
+<!-- TEAM -->
+<section id="team">
+<h2>Leadership Team</h2>
 
-<div class="grid">
-<div class="card">Candidate submits consent & KYC</div>
-<div class="card">Verification initiated</div>
-<div class="card">Database / field investigation</div>
-<div class="card">QC & fraud rule engine</div>
-<div class="card">Final digital report delivered</div>
+<div class="grid team">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=600&q=60">
+<b>Divya Bhatt</b><br>
+Founder & CEO
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=60">
+<b>Arjun Lakra</b><br>
+Head – Operations
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=600&q=60">
+<b>Ayush Aman</b><br>
+Head – Legal & Compliance
+</div>
+
 </div>
 </section>
 
-<!-- IMPACT COUNTERS -->
+<!-- IMPACT -->
 <section id="impact">
 <h2>Our Impact</h2>
 
 <div class="grid">
-<div class="counterBox"><span id="candidates">0</span>+ Candidates Verified</div>
-<div class="counterBox"><span id="clients">0</span>+ Corporate Clients</div>
-<div class="counterBox"><span id="experience">0</span>+ Years Experience</div>
-<div class="counterBox"><span id="cities">0</span>+ Cities Covered</div>
+<div class="counter">5000+ Candidates Verified</div>
+<div class="counter">120+ Corporate Clients</div>
+<div class="counter">8+ Years Experience</div>
+<div class="counter">50+ Cities Covered</div>
 </div>
 </section>
 
-<!-- TRUSTED CLIENT LOGOS -->
+<!-- CLIENT LOGOS -->
 <section id="clients">
 <h2>Trusted By</h2>
 
@@ -223,52 +142,28 @@ animate("cities",50);
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Tata_Consultancy_Services_Logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Wipro_Primary_Logo_Color_RGB.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Tech_Mahindra_New_Logo.svg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/HCL_Technologies_Logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Capgemini_201x_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Tech_Mahindra_New_Logo.svg">
 
 </div>
 
 <p style="text-align:center;font-size:12px">
-Logos shown for representation — not actual clients
+Logos shown for representation only
 </p>
 </section>
 
-<!-- TESTIMONIAL -->
-<section>
-<h2>Client Reviews</h2>
-
-<div class="slider">
-<div class="slide card">
-“Very professional verification support.” — HR Head, Startup
-</div>
-<div class="slide card">
-“Fast TAT and accurate reports.” — HR Manager, IT Company
-</div>
-</div>
-</section>
-
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
-
-<form method="post" enctype="multipart/form-data">
-Name<br><input required><br><br>
-Email<br><input type="email" required><br><br>
-Upload Documents<br><input type="file"><br><br>
-Message<br><textarea></textarea><br><br>
-<button>Submit</button>
-</form>
-
 <p><b>Email:</b> verification@hiresure360.com</p>
-<p><b>WhatsApp:</b> +91 9717272021</p>
+<p><b>WhatsApp:</b> 9717272021</p>
 </section>
 
-<footer style="text-align:center;background:#0b2559;color:white;padding:20px">
-© 2026 Hiresure360 — Background Verification Company in India
+<footer style="text-align:center;background:#0b2559;color:white;padding:18px">
+© 2026 Hiresure360 — Background Verification India
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919717272021" target="_blank">💬 WhatsApp Chat</a>
+<a class="whatsapp" href="https://wa.me/919717272021">Chat on WhatsApp</a>
 
 </body>
 </html>
