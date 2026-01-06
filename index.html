@@ -3,23 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <title>Hiresure360 | Background Verification Company in India</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="description" content="Hiresure360 provides employee background verification services including employment verification, education verification, address verification, criminal record check and ID verification across India.">
-<meta name="keywords" content="background verification, bgv company India, employee verification, police verification, address verification, employment check, education verification, Hiresure360">
+<meta name="description" content="Hiresure360 provides employee background verification services including employment verification, education verification, criminal record check, address verification and ID verification across India.">
+<meta name="keywords" content="background verification, employee verification, bgv company India, police verification, address verification, employment check, education verification, hiresure360">
 <meta name="author" content="Hiresure360">
 
 <style>
 
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:white;color:#0b2559}
-
-/* HEADER */
-header{
-background:#02245b;
-color:white;
-text-align:center;
-padding:90px 20px;
-}
 
 /* NAVBAR */
 nav{
@@ -27,7 +19,7 @@ background:#09337b;
 text-align:center;
 position:sticky;
 top:0;
-z-index:10;
+z-index:100;
 }
 nav a{
 color:white;
@@ -35,17 +27,17 @@ text-decoration:none;
 padding:14px 18px;
 display:inline-block;
 }
-nav a:hover{background:#0d4bd6}
+nav a:hover{background:#0f4ee9}
 
-/* SECTIONS */
-section{padding:60px 22px;max-width:1100px;margin:auto}
+/* MAIN SECTIONS */
+section{padding:60px 20px;max-width:1150px;margin:auto}
 h2{text-align:center;color:#02245b}
 
-/* GRID */
+/* GRID LAYOUT */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 /* CARDS */
@@ -55,18 +47,22 @@ border-radius:12px;
 padding:16px;
 border:1px solid #cfd9ff;
 }
-
-/* service cards button */
-.card.click{
-cursor:pointer;
-text-decoration:none;
-color:#02245b;
-}
-
+.card.click{text-decoration:none;color:#02245b}
 .card:hover{background:#eaf0ff}
 
 /* IMAGES */
 .img{width:100%;border-radius:10px}
+
+/* HERO SLIDER */
+.hero-slider{position:relative;height:430px;color:white;text-align:center;overflow:hidden}
+.hero-slide{
+position:absolute;inset:0;
+background-size:cover;background-position:center;
+opacity:0;transition:opacity 1s ease-in-out
+}
+.hero-slide.active{opacity:1}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.hero-text{position:relative;top:50%;transform:translateY(-50%)}
 
 /* COUNTERS */
 .counter-box{
@@ -77,12 +73,18 @@ border-radius:10px;
 font-size:18px;
 }
 
-/* Testimonials */
-.testimonial{
-background:#f6f8ff;
-border-radius:12px;
-padding:14px;
+/* CLIENT LOGOS */
+.logos{
+display:flex;
+gap:25px;
+overflow-x:auto;
+justify-content:center;
 }
+.logos img{height:55px}
+
+/* TESTIMONIALS */
+.test{display:none;text-align:center}
+.test.active{display:block}
 
 /* FORM */
 input,textarea{
@@ -92,7 +94,6 @@ margin-top:6px;
 border-radius:8px;
 border:1px solid #b8c9ff;
 }
-
 button{
 background:#09337b;
 color:white;
@@ -102,7 +103,7 @@ border-radius:8px;
 cursor:pointer;
 }
 
-/* WhatsApp floating */
+/* WhatsApp Button */
 .whatsapp{
 position:fixed;
 right:18px;
@@ -120,33 +121,44 @@ background:#02245b;
 color:white;
 text-align:center;
 padding:25px;
-margin-top:20px
+margin-top:20px;
 }
 
 </style>
-
-<script>
-// counter animation
-document.addEventListener("DOMContentLoaded",()=>{
-document.querySelectorAll(".count").forEach(c=>{
-let target=+c.getAttribute("data-target");
-let n=0;
-let speed=10;
-let update=()=>{ if(n<target){ n+=Math.ceil(target/100); c.innerText=n; setTimeout(update,speed);} else c.innerText=target+"+";}
-update();
-});
-});
-</script>
 
 </head>
 
 <body>
 
-<header>
-<h1>Hiresure360</h1>
-<p>Trusted Background Verification & Employee Screening Services</p>
-</header>
+<!-- HERO BANNER SLIDER -->
+<div class="hero-slider">
 
+<div class="hero-slide active" style="background-image:url('https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg');"></div>
+
+<div class="hero-slide" style="background-image:url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg');"></div>
+
+<div class="hero-slide" style="background-image:url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg');"></div>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-text">
+<h1>Hiresure360</h1>
+<h3>Trusted Background Verification & Employee Screening Services</h3>
+</div>
+
+</div>
+
+<script>
+let hs=document.querySelectorAll(".hero-slide");
+let hi=0;
+setInterval(()=>{
+ hs[hi].classList.remove("active");
+ hi=(hi+1)%hs.length;
+ hs[hi].classList.add("active");
+},4000);
+</script>
+
+<!-- NAVIGATION -->
 <nav>
 <a href="#why">Why Us</a>
 <a href="#services">Services</a>
@@ -155,14 +167,15 @@ update();
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- WHY -->
+<!-- WHY US -->
 <section id="why">
-<h2>Why Choose Us</h2>
+<h2>Why Choose Hiresure360</h2>
+
 <div class="grid">
-<div class="card">✔ Pan-India Network</div>
-<div class="card">✔ Quick Turnaround Time</div>
-<div class="card">✔ Accurate Reports</div>
-<div class="card">✔ Data Privacy & Security</div>
+<div class="card">✔ Pan-India verification network</div>
+<div class="card">✔ Fast turnaround time</div>
+<div class="card">✔ Accurate & verified reports</div>
+<div class="card">✔ Secure & confidential data handling</div>
 </div>
 </section>
 
@@ -172,28 +185,28 @@ update();
 
 <div class="grid">
 
-<a class="card click" target="_blank" href="https://forms.gle/">
+<a class="card click" target="_blank" href="#">
 <img class="img" src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
 <b>Employment Verification</b><br>
 Role, tenure & HR confirmation
 </a>
 
-<a class="card click" target="_blank" href="https://forms.gle/">
+<a class="card click" target="_blank" href="#">
 <img class="img" src="https://images.pexels.com/photos/5905870/pexels-photo-5905870.jpeg">
 <b>Education Verification</b><br>
 University & degree validation
 </a>
 
-<a class="card click" target="_blank" href="https://forms.gle/">
+<a class="card click" target="_blank" href="#">
 <img class="img" src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg">
 <b>Address Verification</b><br>
-Digital / physical check
+Physical / digital address verification
 </a>
 
-<a class="card click" target="_blank" href="https://forms.gle/">
+<a class="card click" target="_blank" href="#">
 <img class="img" src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg">
 <b>Criminal Record Check</b><br>
-Police & court database search
+Police & court database screening
 </a>
 
 </div>
@@ -202,17 +215,75 @@ Police & court database search
 <!-- COUNTERS -->
 <section>
 <h2>Our Impact</h2>
+
 <div class="grid">
-<div class="counter-box"><span class="count" data-target="5000"></span><br>Candidates Verified</div>
-<div class="counter-box"><span class="count" data-target="120"></span><br>Corporate Clients</div>
-<div class="counter-box"><span class="count" data-target="8"></span><br>Years Experience</div>
-<div class="counter-box"><span class="count" data-target="50"></span><br>Cities Covered</div>
+<div class="counter-box"><span class="count" data-target="5000">0</span><br>Candidates Verified</div>
+<div class="counter-box"><span class="count" data-target="120">0</span><br>Corporate Clients</div>
+<div class="counter-box"><span class="count" data-target="8">0</span><br>Years Experience</div>
+<div class="counter-box"><span class="count" data-target="50">0</span><br>Cities Covered</div>
 </div>
 </section>
+
+<script>
+document.querySelectorAll(".count").forEach(counter=>{
+ let update=()=>{
+  let max=+counter.getAttribute("data-target");
+  let cur=+counter.innerText;
+  let inc=Math.ceil(max/100);
+  if(cur<max){counter.innerText=cur+inc;setTimeout(update,25);}else counter.innerText=max+"+";}
+ update();
+});
+</script>
+
+<!-- CLIENT LOGOS -->
+<section>
+<h2>Trusted By</h2>
+
+<div class="logos">
+<img src="https://1000logos.net/wp-content/uploads/2021/05/TCS-logo.png">
+<img src="https://1000logos.net/wp-content/uploads/2021/05/Accenture-logo.png">
+<img src="https://1000logos.net/wp-content/uploads/2017/03/Deloitte-Logo.png">
+<img src="https://1000logos.net/wp-content/uploads/2020/06/Infosys-logo.png">
+<img src="https://1000logos.net/wp-content/uploads/2017/03/Wipro-logo.png">
+</div>
+</section>
+
+<!-- COMPLIANCE -->
+<section>
+<h2>Compliance & Certifications</h2>
+
+<div class="grid">
+<div class="card">✔ ISO 27001 Inspired Practices</div>
+<div class="card">✔ GDPR-aligned Data Handling</div>
+<div class="card">✔ Consent-based Verification</div>
+<div class="card">✔ Legal HR Compliance Focused</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<h2>Client Testimonials</h2>
+
+<div class="test active">“Quick and reliable service.” — HR Manager</div>
+<div class="test">“Professional BGV partner we trust.” — Recruiter</div>
+<div class="test">“Helped us onboard employees faster.” — Startup Founder</div>
+
+</section>
+
+<script>
+let tx=0;
+let arr=document.querySelectorAll(".test");
+setInterval(()=>{
+arr[tx].classList.remove("active");
+tx=(tx+1)%arr.length;
+arr[tx].classList.add("active");
+},3000);
+</script>
 
 <!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
+
 <div class="grid">
 <div class="card"><b>Basic</b><br>ID + Address<br><b>₹499</b></div>
 <div class="card"><b>Standard</b><br>Employment + Education<br><b>₹600</b></div>
@@ -244,35 +315,28 @@ Police & court database search
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section>
-<h2>Client Reviews</h2>
-<div class="grid">
-<div class="testimonial">“Quick and reliable service.”</div>
-<div class="testimonial">“Professional BGV partner we trust.”</div>
-<div class="testimonial">“Helped us verify 1000+ employees.”</div>
-</div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
 
-<form action="mailto:verification@hiresure360.com" method="POST" enctype="multipart/form-data">
+<form action="https://formsubmit.co/verification@hiresure360.com" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="_autoresponse" value="Thank you for contacting Hiresure360. Our team will reply shortly.">
+<input type="hidden" name="_template" value="table">
 
 Your Name
-<input required>
+<input name="name" required>
 
 Email
-<input type="email" required>
+<input type="email" name="email" required>
 
 Message
-<textarea required></textarea>
+<textarea name="message" required></textarea>
 
-Attach Documents
-<input type="file">
+Attach Document
+<input type="file" name="file">
 
-<button>Send</button>
+<button type="submit">Submit</button>
 </form>
 
 <p><b>Email:</b> verification@hiresure360.com</p>
